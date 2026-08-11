@@ -1,0 +1,163 @@
+APP_NAME="VTU Platform"
+APP_ENV=production
+APP_KEY=base64:Q/mkZb3SUF3rYoWLsNsIVxxxxxxx
+APP_DEBUG=false
+APP_TIMEZONE=Africa/Lagos
+APP_URL= 
+
+# ── Single Tenant ID ─────────────────────────────────────
+# Set this to the ID of your tenant record in the tenants table
+TENANT_ID=1
+
+APP_LOCALE=en
+APP_FALLBACK_LOCALE=en
+APP_FAKER_LOCALE=en_US
+APP_MAINTENANCE_DRIVER=file
+
+# -----------------------------------------------
+# DATABASE — Your XAMPP MySQL settings
+# -----------------------------------------------
+DB_CONNECTION=
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=A
+
+# -----------------------------------------------
+# CACHE & QUEUE
+# Use file/database for XAMPP (no Redis needed)
+# Switch to redis when you move to VPS
+# -----------------------------------------------
+CACHE_STORE=file
+QUEUE_CONNECTION=database
+SESSION_DRIVER=file
+SESSION_LIFETIME=120
+SESSION_ENCRYPT=true
+SESSION_SECURE_COOKIE=true
+SESSION_SAME_SITE=lax
+SESSION_COOKIE=vtu_session
+
+# -----------------------------------------------
+# MULTI-TENANCY
+# Change vtu.test to your real domain in production
+# -----------------------------------------------
+# ── Multi-tenancy ─────────────────────────────────────────
+CENTRAL_DOMAIN=dwana.website
+TENANCY_DATABASE_AUTO_CREATE=false
+
+# -----------------------------------------------
+# MAIL — Use Mailtrap for local testing (free)
+# Sign up at mailtrap.io and paste your credentials
+# -----------------------------------------------
+# ── Mail ─────────────────────────────────────────────────
+# Use real SMTP — Zoho, Google Workspace, Brevo, Mailgun etc.
+MAIL_MAILER=smtp
+MAIL_HOST=
+MAIL_PORT=465
+MAIL_USERNAME=test@d
+MAIL_PASSWORD=
+MAIL_ENCRYPTION=ssl
+MAIL_FROM_ADDRESS="test@dwa"
+MAIL_FROM_NAME="${APP_NAME}"
+
+# -----------------------------------------------
+# PAYMENT GATEWAYS
+# Use test/sandbox keys while developing
+# -----------------------------------------------
+PAYSTACK_PUBLIC_KEY=pk_live_
+PAYSTACK_SECRET_KEY=sk_live_
+PAYSTACK_PAYMENT_URL=https://api.paystack.co
+PAYSTACK_MERCHANT_EMAIL=
+PAYSTACK_CHARGE_PERCENT=1.5
+MIN_FUND_AMOUNT=100
+MAX_FUND_AMOUNT=1000000
+
+# ── Monnify ───────────────────────────────────────────────
+
+MONNIFY_API_KEY=MK_PROD_CUZT
+MONNIFY_SECRET_KEY=
+MONNIFY_CONTRACT_CODE=
+MONNIFY_BASE_URL=https://api.monnify.com
+MONNIFY_IS_LIVE=true
+MONNIFY_ENABLED=true
+
+
+# -----------------------------------------------
+# VTU PROVIDERS
+# Use sandbox while developing
+
+# ── ClubKonnect (Primary VTU Provider) ──────────────────────────────────
+CLUBKONNECT_USER_ID=
+CLUBKONNECT_API_KEY=
+CLUBKONNECT_BASE_URL=https://www.nellobytesystems.com
+CLUBKONNECT_IS_LIVE=true
+DEFAULT_VTU_PROVIDER=clubkonnect
+
+# ── AutoPlug SIM Hosting ────────────────────────────────
+AUTOPLUG_BASE_URL=https://autoplug.app/api
+AUTOPLUG_EMAIL=
+AUTOPLUG_PASSWORD=
+
+
+# ── N3TData ────────────────────────────────
+# N3TData - Tertiary VTU Provider
+N3TDATA_API_KEY=
+N3TDATA_BASE_URL=https://n3tdata.com/api
+N3TDATA_IS_LIVE=live
+
+# ── VTPass ────────────────────────────────
+VTPASS_API_KEY=
+VTPASS_PUBLIC_KEY=
+VTPASS_SECRET_KEY=
+VTPASS_BASE_URL=https://api-service.vtpass.com/api
+VTPASS_IS_LIVE=true
+
+MASKAWASUB_API_KEY=
+MASKAWASUB_BASE_URL=https://www.maskawasub.com/api
+
+
+HUSMODATA_API_KEY=
+HUSMODATA_BASE_URL=https://husmodataapi.com/api
+
+# -----------------------------------------------
+# SMS — TERMII
+# -----------------------------------------------
+TERMII_API_KEY=
+TERMII_BASE_URL=https://api.ng.termii.com/api
+TERMII_SENDER_ID=N-Alert
+# TERMII_SENDER_ID=VTUPlatform
+TERMII_CHANNEL=generic
+
+# -----------------------------------------------
+# SECURITY
+# -----------------------------------------------
+BCRYPT_ROUNDS=12
+LOGIN_MAX_ATTEMPTS=5
+LOGIN_DECAY_MINUTES=15
+PIN_MAX_ATTEMPTS=3
+TRANSACTION_OTP_THRESHOLD=50000
+FORCE_HTTPS=true
+
+# -----------------------------------------------
+# LOGGING
+# Use daily to prevent huge log files
+# -----------------------------------------------
+LOG_CHANNEL=daily
+LOG_LEVEL=error
+#LOG_LEVEL=debug
+#LOG_LEVEL=info
+
+# -----------------------------------------------
+# FEATURE FLAGS
+# -----------------------------------------------
+FEATURE_FACE_RECOGNITION=false
+FEATURE_CRYPTO=false
+FEATURE_BULK_SMS=true
+FEATURE_API_ACCESS=true
+FEATURE_SIM_HOSTING=true
+FEATURE_REFERRAL=true
+FEATURE_LOYALTY_POINTS=true
+FEATURE_DATA_PIN=true
+FEATURE_RECHARGE_CARD=true
+FEATURE_ALPHA_TOPUP=true
